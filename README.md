@@ -1,4 +1,4 @@
-# C_Shard_Convention
+# C Sharp Convention
 C# - Naming Standards
 
 # Why Coding Standards
