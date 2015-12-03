@@ -24,27 +24,30 @@ All you have to do is study good standards once and keep them in the back of you
 Namespaces - Names should be meaningful and complete. Indicate your company or name, product and then your utility. Do not abbreviate.
 
 ``` csharp
-//Good
+// Good
 namespace CompanyName.ProductName.Utility
-//Bad
+
+// Bad
 namespace CN.PROD.UTIL
    Classes - Class names should always be a noun and, again, should be meaningful. Avoid verbs
  
-//Good
+// Good
 class Image
 {
    ...
 }
+
 class Filters
 {
    ...
 }
  
-//Bad
+// Bad
 class Act
 {
    ...
 }
+
 class Enhance
 {
    ...
