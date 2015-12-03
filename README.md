@@ -24,9 +24,29 @@ All you have to do is study good standards once and keep them in the back of you
 Namespaces - Names should be meaningful and complete. Indicate your company or name, product and then your utility. Do not abbreviate.
 
 ``` csharp
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
+//Good
+namespace CompanyName.ProductName.Utility
+//Bad
+namespace CN.PROD.UTIL
+   Classes - Class names should always be a noun and, again, should be meaningful. Avoid verbs
+ 
+//Good
+class Image
+{
+   ...
+}
+class Filters
+{
+   ...
+}
+ 
+//Bad
+class Act
+{
+   ...
+}
+class Enhance
+{
+   ...
 }
 ```
