@@ -153,7 +153,7 @@ public delegate string StringMethodDelegate();
    C# standards dictate that you use a certain pattern of Pascal Casing (first word capitalized) and Camel Casing (all but first word capitalized).
    Pascal Casing - use PascalCasing for classes, types, methods and constants.
 ```  csharp
- public class ImageClass
+public class ImageClass
 {
    const int MaxImageWidth = 100;
    public void ResizeImage();
