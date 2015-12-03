@@ -167,3 +167,38 @@ enum Days
    ...
 }
 ```
+   Camel Casing - use camelCasing for local variables and method arguments.
+``` csharp
+int ResizeImage(int imageCount)
+{
+   for(int index = 0; index < imageCount; index++)
+   {
+      ...
+   }
+}
+```
+
+# Delegates
+   Use delegate inference instead of explicit delegate instantiation.
+``` csharp
+public delegate void ImageChangedDelegate();
+public void ChangeImage()
+{
+   ...
+}
+ 
+// Good
+ImageChangedDelegate imageChanged = ChangeImage;
+ 
+// Bad
+ImageChangedDelegate imageChanged =
+   new ImageChangedDelegate(ChangeImage);
+```
+   Use empty parenthesis on anonymous methods without parameters.
+``` csharp
+public delegate void ImageChangeDelegate();
+ImageChangedDelegate imageChanged = delegate()
+{
+   ...
+}
+```
