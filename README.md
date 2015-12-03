@@ -119,3 +119,51 @@ interface IEnumerable
    IEnumerator GetEnumerator();
 }
 ```
+   Custom attributes - Suffix all attribute class names with Attribute. The C# compiler recognizes this and allows you to omit it when using it.
+```  csharp
+public class IsTestedAttribute : Attribute
+{
+   public override string ToString()
+   {
+      return "Is Tested";
+   }
+}
+ 
+//"Attribute" suffix can be omitted
+
+[IsTested]
+public void Ring();
+```
+   Custom exceptions - Suffix all custom exception names with Exception.
+```  csharp
+public class UserNotExistentException :
+    System.ApplicationException
+{
+   ...
+}
+```
+   Delegates - Suffix all event handlers with Handler; suffix everything else with Delegate.
+```  csharp
+public delegate void ImageChangedHandler();
+public delegate string StringMethodDelegate();
+```
+
+# Casing
+
+   C# standards dictate that you use a certain pattern of Pascal Casing (first word capitalized) and Camel Casing (all but first word capitalized).
+   Pascal Casing - use PascalCasing for classes, types, methods and constants.
+```  csharp
+ public class ImageClass
+{
+   const int MaxImageWidth = 100;
+   public void ResizeImage();
+}
+ 
+enum Days
+{
+   Sunday,
+   Monday,
+   Tuesday,
+   ...
+}
+```
