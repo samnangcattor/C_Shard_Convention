@@ -23,13 +23,13 @@ All you have to do is study good standards once and keep them in the back of you
 "Meaningful" is the keyword in naming. By meaningful names, I mean concise names that accurately describe the variable, method or object. Let's see how this would be in C#:
 Namespaces - Names should be meaningful and complete. Indicate your company or name, product and then your utility. Do not abbreviate.
 
+   Classes - Class names should always be a noun and, again, should be meaningful. Avoid verbs
 ``` csharp
 // Good
 namespace CompanyName.ProductName.Utility
 
 // Bad
 namespace CN.PROD.UTIL
-   Classes - Class names should always be a noun and, again, should be meaningful. Avoid verbs
  
 // Good
 class Image
@@ -53,3 +53,15 @@ class Enhance
    ...
 }
 ```
+   Methods - Always use a verb-noun pair, unless the method operates on its containing class, in which case, use just a verb.
+```  csharp
+// Good
+public void InitializePath();
+public void GetPath();
+public void ShowChanges();
+public void System.Windows.Forms.Form.Show();
+ 
+// Bad
+public void Path();
+public void Changes();
+``` 
