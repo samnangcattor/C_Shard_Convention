@@ -65,3 +65,57 @@ public void System.Windows.Forms.Form.Show();
 public void Path();
 public void Changes();
 ``` 
+   Methods with return values - The name should reflect the return value.
+```  csharp
+// Good
+public int GetImageWidth(Bitmap image);
+ 
+// Bad
+public int GetDimensions(Bitmap image);
+```
+   Variables - Do not abbreviate variable names. Variable names should again be descriptive and meaningful.
+```  csharp
+// Good
+int customerCount = 0;
+int index = 0;
+string temp = "";
+ 
+// Bad
+int cc = 0;
+int i = 0;
+string t = "";
+```
+   Private member variables - Prefix class member variables with m_.
+```  csharp
+public class Image
+{
+   private int m_initialWidth;
+   private string m_filename;
+   ...
+}
+```
+   Interfaces - Prefix all interface names with I. Use a name that reflects an interface's capabilities, either a general noun or an "-able".
+```  csharp
+interface IClock
+{
+   DateTime Time { get; set; }
+   ...
+}
+ 
+interface IAlarmClock : IClock
+{
+   void Ring();
+   DateTime AlarmTime { get; set; }
+   ...
+}
+ 
+interface IDisposable
+{
+   void Dispose();
+}
+ 
+interface IEnumerable
+{
+   IEnumerator GetEnumerator();
+}
+```
